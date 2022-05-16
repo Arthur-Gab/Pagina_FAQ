@@ -1,0 +1,584 @@
+/* ===== Google Font Import - Poformsins ===== */
+/* CONFIGURAÇÕES GERAIS */
+
+body {
+    background-color: rgb(248, 249, 250);
+}
+
+#logo1 {
+    height: 10vh;
+    margin-left: 20%;
+}
+
+#navbarItems {
+    padding-right: 7vh;
+}
+
+.nav-link {
+    margin-left: 5vh;
+    font-size: 3vh;
+    font-family: 'titin';
+    letter-spacing: 0.2rem;
+}
+
+#nav-linkblue {
+    color: rgb(0, 162, 255);
+    cursor: pointer;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    position: relative;
+    transition: ease-in-out 0.5s;
+    color: rgb(0, 162, 255);
+}
+
+
+@font-face {
+    font-family: 'titin';
+    src: url('../abraham/1\ Abraham.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#switchesButtons {
+    background-color: rgb(0, 119, 255);
+    /* teste */
+}
+
+#setaSlide {
+    border-radius: 30px;
+    height: 5vh;
+    width: 3vh;
+    padding: 2vh;
+    /* teste */
+}
+
+.divMain {
+    background-color: rgb(241, 241, 241);
+    height: 80vh;
+}
+
+footer p {
+    margin-bottom: 0;
+    color: white
+}
+
+.centerP {
+    text-align: center;
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+footer {
+    height: 15vh;
+}
+
+#footer {
+    width: 100%;
+    text-align: center;
+}
+
+/* PAGINA DE LOGIN */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.modal-container.mostrar {
+    display: flex;
+}
+
+/* @keyframes modal{
+    from{
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+.mostrar .modal{
+    animation: modal .3s;
+} */
+.fechar {
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    border-radius: 1vh 1vh;
+    font-weight: bold;
+    border: none;
+}
+
+.fechar:hover {
+    color: #4070f4;
+}
+
+.modal-container {
+    display: none;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(58, 58, 58, 0.589);
+    z-index: 4000;
+}
+
+.container {
+    z-index: 5000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 430px;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 0 20px;
+}
+
+.container .forms {
+    display: flex;
+    align-items: center;
+    height: 440px;
+    width: 200%;
+    transition: height 0.2s ease;
+}
+
+
+.container .form {
+    width: 50%;
+    padding: 30px;
+    background-color: #fff;
+    transition: margin-left 0.18s ease;
+}
+
+.container.active .login {
+    margin-left: -50%;
+    opacity: 0;
+    transition: margin-left 0.18s ease, opacity 0.15s ease;
+}
+
+.container .signup {
+    opacity: 0;
+    transition: opacity 0.09s ease;
+}
+
+.container.active .signup {
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+.container.active .forms {
+    height: 600px;
+}
+
+.container .form .title {
+    position: relative;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.form .title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background-color: #4070f4;
+    border-radius: 25px;
+}
+
+.form .input-field {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.input-field input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid) {
+    border-bottom-color: #4070f4;
+}
+
+.input-field i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 23px;
+    transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid)~i {
+    color: #4070f4;
+}
+
+.input-field i.icon {
+    left: 0;
+}
+
+.input-field i.showHidePw {
+    right: 0;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.form .checkbox-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.checkbox-text .checkbox-content {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-content input {
+    margin: 0 8px -2px 4px;
+    accent-color: #4070f4;
+}
+
+.form .text {
+    color: #333;
+    font-size: 14px;
+}
+
+.form a.text {
+    color: #4070f4;
+    text-decoration: none;
+}
+
+.form a:hover {
+    text-decoration: underline;
+}
+
+.form .button {
+    margin-top: 35px;
+}
+
+.form .button input {
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background-color: #4070f4;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button input:hover {
+    background-color: #265df2;
+}
+
+.form .login-signup {
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* 
+///////////////
+///////////////
+///////////////
+//////FAQ////// 
+///////////////
+///////////////
+///////////////
+*/
+.faq-container {
+    box-sizing: border-box;
+    min-height: 70vh;
+    background-color: #eee;
+}
+
+/* Section Como podemos te ajudar */
+.faq-pesquisa {
+    background-color: #212529;
+    border-top: 0.3vh solid #00a2ff;
+    padding: 5vh 1.5vh;
+}
+
+.faq-pesquisa-duvida {
+    justify-content: center;
+    text-align: center;
+}
+
+.faq-pesquisa-duvida h1 {
+    color: #fff;
+    font-family: 'titin';
+    font-size: 4.5vh;
+}
+
+.faq-pesquisa-duvida input {
+    display: block;
+    min-height: 5vh;
+    min-width: 60%;
+    margin: 0 auto;
+    padding: 0 1.705vh 0 5.33vh;
+    font-size: 3vh;
+    font-weight: 500;
+    border-style: none;
+    border-radius: 1vh;
+    background-image: url(/img/lupa.png);
+    background-size: cover;
+    background-position: 1.06vh;
+    background-size: 3.411vh;
+    background-repeat: no-repeat;
+}
+
+.faq-pesquisa-duvida input:hover {
+    width: 70%;
+    transition: all 100ms;
+}
+
+.faq-content-divider {
+    height: 1px;
+    margin-bottom: 24px;
+    background-color: rgba(0, 0, 0, .1);
+    display: block;
+}
+
+/* Section Organizadores e Doadores */
+.faq-segment-section {
+    z-index: 2;
+    background-color: #f5f5f5;
+    position: relative;
+    display: block;
+}
+
+.faq-segment-container-w-clearfix {
+    padding: 24px 16px;
+    width: 100%;
+    max-width: 1600px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.faq-segment-user{
+    width: 100%;
+    float: none;
+    background-color: #fff;
+    padding: 0px 0px 32px 0px;
+    border-radius: 15px;
+    margin: 1px;
+}
+
+.faq-segment-description {
+    padding-top: 16px;
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.faq-segment-img-block {
+    background-image: url("//theme.zdassets.com/theme_assets/101015/c37c96511204a139dc5831112e3525f54b098598.svg");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    float: left;
+    height: 200px;
+    width: 200px;
+}
+
+.faq-segment-img {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    float: none;
+    position: relative;
+}
+
+.faq-segment-description-block {
+    padding: 48px 24px 40px;
+}
+
+.segment-faq-section-title{
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    padding: 0 4px;
+    line-height: 100%;
+}
+
+.segment-faq-home-text{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.faq-contact-channels {
+    list-style: none;
+    max-width: 100%;
+    padding: 0 16px;
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+}
+
+.contact-segment-list {
+    width: 50%;
+    padding: 0 8px;
+    float: left;
+}
+
+.faq-segment-bullet {
+    display: block;
+    width: 56px;
+    height: 56px;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+    padding: 12px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 50px;
+}
+
+.faq-segment-topic-text {
+    margin-bottom: 8px;
+    padding: 4px 0;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+.faq-topic-link {
+    color: #265df2;
+    font-weight: 500;
+}
+
+.faq-ou {
+    width: 50px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 12px;
+    font-size: 14px;
+    background-color: #4070f4;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+
+}
+
+/* Section Duvidas Frequentes */
+
+.faq-duvidas-frequentes {
+    z-index: 2;
+    background-color: #f5f5f5;
+    position: relative;
+    display: block;
+}
+
+.faq-conteudo-duvidas{
+    padding: 24px 16px;
+    width: 100%;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.faq-conteudo-duvidas h2{
+    text-align: center;
+    font-size: 28px;
+    font-weight: 200;
+    margin-bottom: 24px;
+}
+
+.faq-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.faq-column-wrapper {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    max-width: 100%;
+    flex: 0 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    text-align: left;
+}
+
+.faq-block-li {
+    display: list-item;
+    position: relative;
+    width: 50%;
+    padding: 0 4px;
+    margin-bottom: 4px;
+}
+
+.faq-duvidas-btn {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgb(0, 0, 0, .1);
+    border-radius: 5px;
+    background-color: #fff;
+    margin-bottom: 4px;
+    box-shadow: 0 0 0 0 rgb(0 0 0 / 10%);
+    transition: all 300ms ease;
+    cursor: pointer;
+}
+
+.faq-img-a-btn{
+    position: relative;
+    width: 32px;
+    height: 32px;
+    margin-top: 16px;
+    margin-right: 16px;
+    margin-left: 16px;
+    padding: 8px;
+    background-image: url(https://theme.zdassets.com/theme_assets/101015/4f09913fd9b1d39eabcd2e78c74cdc4fb3a812da.svg);
+    background-color: #4a60f4;
+    background-size: 24px;
+    background-position: 45% 50%;
+    border-radius: 50px;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+.article-duvidas {
+    display: block;
+    margin-bottom: 0;
+    margin-top: 18px;
+    padding: 0px 48px 16px 64px;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #1d1d1d;
+    font-size: 18px;
+    line-height: 150%;
+    font-weight: 300;
+    text-decoration: none;
+    cursor: pointer;
+}
